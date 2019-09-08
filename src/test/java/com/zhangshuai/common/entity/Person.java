@@ -2,81 +2,61 @@ package com.zhangshuai.common.entity;
 
 import java.util.Date;
 
-/**
- * 
- * @ClassName: Person 
- * @Description: 实体类方法
- * @author: 张帅帅
- * @date: 2019年6月17日 上午9:51:11
- */
 public class Person {
-	//ID
+//姓名、 年龄、 介绍、 生成日期
 	private Integer id;
-	//姓名
 	private String name;
-	//年龄
-	private int age;
-	//介绍
-	private String content;
-	
-	private Date date;
+	private Integer  age;
+	private String text;
+	private Date birthday;
 	
 	
-
-	@Override
-	public String toString() {
-		return "Person [name=" + name + ", age=" + age + ", content=" + content + ", date=" + date + "]";
-	}
-
-	public Person(String name, int age, String content, Date date2) {
+	
+	public Person(String name, Integer age, String text, Date birthday) {
 		super();
 		this.name = name;
 		this.age = age;
-		this.content = content;
-		this.date = date2;
+		this.text = text;
+		this.birthday = birthday;
 	}
-
+	public Person() {
+		super();
+	}
 	public Integer getId() {
 		return id;
 	}
-
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
-
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
-
-	public String getContent() {
-		return content;
+	public String getText() {
+		return text;
 	}
-
-	public void setContent(String content) {
-		this.content = content;
+	public void setText(String text) {
+		this.text = text;
 	}
-
-	public Date getDate() {
-		return date;
+	public Date getBirthday() {
+		return birthday;
 	}
-
-	public void setDate(Date date) {
-		this.date = date;
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", name=" + name + ", age=" + age + ", text=" + text + ", birthday=" + birthday
+				+ "]";
 	}
 	
 	
-	
-
 }
